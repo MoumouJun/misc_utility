@@ -1,0 +1,3 @@
+[submodule "src/tools/EasyLogger"]
+	path = src/tools/EasyLogger
+	url = git@github.com:armink/EasyLogger.git

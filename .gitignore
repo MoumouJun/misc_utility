@@ -1,0 +1,6 @@
+*.o
+*.out
+build/
+.user/
+.vscode/
+src/third_tools
