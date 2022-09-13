@@ -241,7 +241,7 @@ void elog_start(void) {
 #endif
 
     /* show version */
-    log_i("EasyLogger V%s is initialize success.", ELOG_SW_VERSION);
+    log_i("ELOG_SW_VERSION","EasyLogger V%s is initialize success.", ELOG_SW_VERSION);
 }
 
 /**
@@ -592,22 +592,9 @@ void elog_output(uint8_t level, const char *tag, const char *file, const char *f
     }
 #endif
 
-    /* package level info */
-    if (get_fmt_enabled(level, ELOG_FMT_LVL)) {
-        log_len += elog_strcpy(log_len, log_buf + log_len, level_output_info[level]);
-    }
-    /* package tag info */
-    if (get_fmt_enabled(level, ELOG_FMT_TAG)) {
-        log_len += elog_strcpy(log_len, log_buf + log_len, tag);
-        /* if the tag length is less than 50% ELOG_FILTER_TAG_MAX_LEN, then fill space */
-        if (tag_len <= ELOG_FILTER_TAG_MAX_LEN / 2) {
-            memset(tag_sapce, ' ', ELOG_FILTER_TAG_MAX_LEN / 2 - tag_len);
-            log_len += elog_strcpy(log_len, log_buf + log_len, tag_sapce);
-        }
-        log_len += elog_strcpy(log_len, log_buf + log_len, " ");
-    }
     /* package time, process and thread info */
-    if (get_fmt_enabled(level, ELOG_FMT_TIME | ELOG_FMT_P_INFO | ELOG_FMT_T_INFO)) {
+    if (get_fmt_enabled(level, ELOG_FMT_TIME | ELOG_FMT_P_INFO | ELOG_FMT_T_INFO))
+    {
         log_len += elog_strcpy(log_len, log_buf + log_len, "[");
         /* package time info */
         if (get_fmt_enabled(level, ELOG_FMT_TIME)) {
@@ -628,6 +615,24 @@ void elog_output(uint8_t level, const char *tag, const char *file, const char *f
             log_len += elog_strcpy(log_len, log_buf + log_len, elog_port_get_t_info());
         }
         log_len += elog_strcpy(log_len, log_buf + log_len, "] ");
+    }
+    /* package level info */
+    if (get_fmt_enabled(level, ELOG_FMT_LVL))
+    {
+        log_len += elog_strcpy(log_len, log_buf + log_len, level_output_info[level]);
+    }
+
+    /* package tag info */
+    if (get_fmt_enabled(level, ELOG_FMT_TAG))
+    {
+        log_len += elog_strcpy(log_len, log_buf + log_len, tag);
+        /* if the tag length is less than 50% ELOG_FILTER_TAG_MAX_LEN, then fill space */
+        // if (tag_len <= ELOG_FILTER_TAG_MAX_LEN / 2)
+        // {
+        //     memset(tag_sapce, ' ', ELOG_FILTER_TAG_MAX_LEN / 2 - tag_len);
+        //     log_len += elog_strcpy(log_len, log_buf + log_len, tag_sapce);
+        // }
+        log_len += elog_strcpy(log_len, log_buf + log_len, " ");
     }
     /* package file directory and name, function name and line number info */
     if (get_fmt_enabled(level, ELOG_FMT_DIR | ELOG_FMT_FUNC | ELOG_FMT_LINE)) {

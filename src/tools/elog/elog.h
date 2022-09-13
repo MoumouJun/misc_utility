@@ -213,40 +213,40 @@ void elog_hexdump(const char *name, uint8_t width, uint8_t *buf, uint16_t size);
  * NOTE: The `LOG_TAG` and `LOG_LVL` must defined before including the <elog.h> when you want to use log_x API.
  */
 #if !defined(LOG_TAG)
-    #define LOG_TAG          ""
+    #define LOG_TAG          "111"
 #endif
 #if !defined(LOG_LVL)
     #define LOG_LVL          ELOG_LVL_VERBOSE
 #endif
 #if LOG_LVL >= ELOG_LVL_ASSERT
-    #define log_a(...)       elog_a(LOG_TAG, __VA_ARGS__)
+    #define log_a(_TAG,...)       elog_a(_TAG, __VA_ARGS__)
 #else
-    #define log_a(...)       ((void)0);
+    #define log_a(_TAG,...)       ((void)0);
 #endif
 #if LOG_LVL >= ELOG_LVL_ERROR
-    #define log_e(...)       elog_e(LOG_TAG, __VA_ARGS__)
+    #define log_e(_TAG,...)       elog_e(_TAG, __VA_ARGS__)
 #else
-    #define log_e(...)       ((void)0);
+    #define log_e(_TAG,...)       ((void)0);
 #endif
 #if LOG_LVL >= ELOG_LVL_WARN
-    #define log_w(...)       elog_w(LOG_TAG, __VA_ARGS__)
+    #define log_w(_TAG,...)       elog_w(_TAG, __VA_ARGS__)
 #else
-    #define log_w(...)       ((void)0);
+    #define log_w(_TAG,...)       ((void)0);
 #endif
 #if LOG_LVL >= ELOG_LVL_INFO
-    #define log_i(...)       elog_i(LOG_TAG, __VA_ARGS__)
+    #define log_i(_TAG,...)       elog_i(_TAG, __VA_ARGS__)
 #else
-    #define log_i(...)       ((void)0);
+    #define log_i(_TAG,...)       ((void)0);
 #endif
 #if LOG_LVL >= ELOG_LVL_DEBUG
-    #define log_d(...)       elog_d(LOG_TAG, __VA_ARGS__)
+    #define log_d(_TAG,...)       elog_d(_TAG, __VA_ARGS__)
 #else
-    #define log_d(...)       ((void)0);
+    #define log_d(_TAG,...)       ((void)0);
 #endif
 #if LOG_LVL >= ELOG_LVL_VERBOSE
-    #define log_v(...)       elog_v(LOG_TAG, __VA_ARGS__)
+    #define log_v(_TAG,...)       elog_v(_TAG, __VA_ARGS__)
 #else
-    #define log_v(...)       ((void)0);
+    #define log_v(_TAG,...)       ((void)0);
 #endif
 
 /* assert API short definition */

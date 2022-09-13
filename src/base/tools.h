@@ -5,6 +5,11 @@
 
 #include <elog.h>
 
+
+/* set EasyLogger log format */
+#define ELOG_FMT_DEBUD (ELOG_LVL_ERROR, ELOG_FMT_TAG | ELOG_FMT_TIME | ELOG_FMT_LVL | ELOG_FMT_DIR | ELOG_FMT_LINE)
+#define ELOG_FMT (ELOG_LVL_ERROR, ELOG_FMT_TAG | ELOG_FMT_TIME | ELOG_FMT_LVL)
+
 class CTools
 {
 public:
@@ -27,9 +32,7 @@ public:
     {
         /* initialize EasyLogger */
         elog_init();
-/* set EasyLogger log format */
-#define ELOG_FMT_DEBUD (ELOG_LVL_ERROR, ELOG_FMT_TIME | ELOG_FMT_LVL | ELOG_FMT_DIR | ELOG_FMT_LINE)
-#define ELOG_FMT (ELOG_LVL_ERROR, ELOG_FMT_TIME | ELOG_FMT_LVL)
+
         elog_set_fmt(ELOG_LVL_ASSERT, ELOG_FMT_DEBUD);
         elog_set_fmt(ELOG_LVL_ERROR, ELOG_FMT);
         elog_set_fmt(ELOG_LVL_WARN, ELOG_FMT);
@@ -55,9 +58,6 @@ public:
     {
         /* initialize EasyLogger */
         elog_init();
-/* set EasyLogger log format */
-#define ELOG_FMT_DEBUD (ELOG_LVL_ERROR, ELOG_FMT_TIME | ELOG_FMT_LVL | ELOG_FMT_DIR | ELOG_FMT_LINE)
-#define ELOG_FMT (ELOG_LVL_ERROR, ELOG_FMT_TIME | ELOG_FMT_LVL)
         elog_set_fmt(ELOG_LVL_ASSERT, ELOG_FMT_DEBUD);
         elog_set_fmt(ELOG_LVL_ERROR, ELOG_FMT);
         elog_set_fmt(ELOG_LVL_WARN, ELOG_FMT);
@@ -70,12 +70,12 @@ public:
 
         /* test log output for all level */
         // log_a("Hello EasyLogger!");
-        log_v("Hello EasyLogger!");
-        log_e("Hello EasyLogger!");
-        log_w("Hello EasyLogger!");
-        log_i("Hello EasyLogger!");
-        log_d("Hello EasyLogger!");
-        log_v("Hello EasyLogger!");
+        log_v("init","Hello EasyLogger!");
+        log_e("init","Hello EasyLogger!");
+        log_w("init","Hello EasyLogger!");
+        log_i("init","Hello EasyLogger!");
+        log_d("init","Hello EasyLogger!");
+        log_v("init","Hello EasyLogger!");
 
         fflush(stdout);
         // sleep(0);
