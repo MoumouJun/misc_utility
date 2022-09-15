@@ -9,7 +9,7 @@ class CLeetCode
 public:
     CLeetCode()
     {
-        log_i("leetcode","[CLeetCode] 算法题测试");
+        log_i("leetcode", "[CLeetCode] 算法题测试");
     }
     ~CLeetCode() {}
 
@@ -42,8 +42,8 @@ public:
         vector<int> out = {1, 6};
         int target = 95;
         (twoSum(in, target) == out)
-            ? (log_i("leetcode","[OK]twoSum"))
-            : (log_i("leetcode","[ERROR]twoSum"));
+            ? (log_i("leetcode", "[OK]%s", __FUNCTION__))
+            : (log_e("leetcode", "[ERROR]%s", __FUNCTION__));
     }
 
     // Definition for singly-linked list.
@@ -102,14 +102,45 @@ public:
         ((l->val == 7) &&
          (l->next->val == 0) &&
          (l->next->next->val == 8))
-            ? (log_i("leetcode","[OK]addTwoNumbers"))
-            : (log_i("leetcode","[ERROR]addTwoNumbers"));
+            ? (log_i("leetcode", "[OK]%s", __FUNCTION__))
+            : (log_e("leetcode", "[ERROR]%s", __FUNCTION__));
     }
 
+    /**
+     * @brief 滑动窗口 unordered_set作为队列
+     *
+     * @param s
+     * @return int
+     */
+    int lengthOfLongestSubstring(string s)
+    {
+        if (s.size() == 0)
+            return 0;
+        unordered_set<char> w;
+        int max_ = 0, len = 0;
+        for (int i = 0; i < s.size(); i++)
+        {
+            while (w.find(s[i]) != w.end())
+            {
+                w.erase(s[len]);
+                len++;
+            }
+            max_ = max(max_, i - len + 1);
+            w.insert(s[i]);
+        }
+        return max_;
+    }
+    void test_lengthOfLongestSubstring(void)
+    {
+        (lengthOfLongestSubstring("pwwkew") == 3)
+            ? (log_i("leetcode", "[OK]%s", __FUNCTION__))
+            : (log_e("leetcode", "[ERROR]%s", __FUNCTION__));
+    }
     void test(void)
     {
         test_twoSum();
         test_addTwoNumbers();
+        test_lengthOfLongestSubstring();
     }
 
 private:
