@@ -4,3 +4,4 @@ build/
 .user/
 .vscode/
 src/third_tools
+*.test
