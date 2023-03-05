@@ -1,0 +1,47 @@
+{
+    // 文件类型自动格式化工具
+    "[shellscript]": {
+        "editor.defaultFormatter": "shakram02.bash-beautify"
+    },
+    //垂直标尺
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "todo-tree.tree.showScanModeButton": true,
+    // "todo-tree.regex.regex": "((|#|<!--|;|/\\*|^)\\s*($TAGS):|^\\s*- \\[ \\])",
+    // "todo-tree.general.tags": ["hbTODO", "hbFIXME", "hbtag", "hbdone", "hbnote"],
+    // "todo-tree.regex.regexCaseSensitive": false,
+    "todo-tree.highlights.defaultHighlight": {
+        //   "foreground": "#f90",
+        "background": "#f90",
+        "icon": "check",
+        "type": "tag",
+        "iconColour": "#f90"
+    },
+    // "todo-tree.filtering.excludeGlobs": ["**/node_modules", "**/dist", "**/*.txt", "**/*.md"],
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {
+            "background": "#f90",
+            "iconColour": "#f90"
+        },
+        "FIXME": {
+            "background": "red",
+            "icon": "beaker",
+            "iconColour": "red"
+        },
+    },
+    "editor.insertSpaces": true,
+    // 折叠标签
+    "workbench.editor.wrapTabs": true,
+    "workbench.editor.showTabs": true,
+    //保存文件时自动删除行尾空格
+    "files.trimTrailingWhitespace": true,
+    "workbench.editor.highlightModifiedTabs": false,
+    //搜索结果显示行号
+    "search.showLineNumbers": true,
+    "editor.renderControlCharacters": true,
+    // 显示空格
+    "editor.renderWhitespace": "all",
+    "workbench.colorTheme": "Monokai",
+}

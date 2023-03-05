@@ -1,0 +1,8 @@
+// 将键绑定放在此文件中以覆盖默认值
+[
+    {
+        "key": "alt+d",
+        "command": "editor.action.formatSelection",
+        "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus"
+    }
+]

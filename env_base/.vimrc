@@ -1,0 +1,17 @@
+syntax on
+set t_Co=256
+set showmode
+set nu
+set cursorline 
+set autoindent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set mouse=a
+set selection=exclusive
+set selectmode=mouse,key
+set wrap
+set ruler
+set showmatch
+set incsearch

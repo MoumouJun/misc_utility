@@ -1,0 +1,36 @@
+[user]
+name = LiuJun
+email = liujun001217@gmail.com
+[i18n]
+logoutputencoding = utf-8
+commitencoding = utf-8
+[gui]
+encoding = utf-8
+[diff]
+tool = vimdiff
+[difftool]
+prompt = false
+[alias]
+co = checkout
+ci = commit
+b = branch -a
+st = status
+s = status -s
+l3 = log -3
+l10 = log -10
+r = remote -v
+
+l = log --oneline -10 --color --graph --pretty=format:'%Cgreen(%ci) %Cred%h -%C(yellow)%d %s %C(bold blue) <%an>' --abbrev-commit
+d = difftool
+lg = log --color --graph --pretty=format:'%Cred%h -%C(yellow)%d %s %Cgreen(%ci) %C(bold blue) <%an>' --abbrev-commit
+
+[color]
+ui = true
+[core]
+filemode = false
+editor = vim
+[filter "lfs"]
+smudge = git-lfs smudge -- %f
+process = git-lfs filter-process
+required = true
+clean = git-lfs clean -- %f
