@@ -44,4 +44,8 @@
     // 显示空格
     "editor.renderWhitespace": "all",
     "workbench.colorTheme": "Monokai",
+    "cmake.sourceDirectory": "${workspaceFolder}/alg",
+    "files.refactoring.autoSave": false,
+    "editor.formatOnSave": false,
+    "editor.multiCursorModifier": "alt",
 }

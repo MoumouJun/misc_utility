@@ -6,6 +6,9 @@ EDITOR=vim
 # export CLICOLOR=1
 # export LSCOLORS=ExFxBxDxCxegedabagacad
 
+export PATH=$PATH:$HOME/bin/
+
+
 # Set color variables
 BLACK="\[\e[0;30m\]"
 DARK_GRAY="\[\e[1;30m\]"
