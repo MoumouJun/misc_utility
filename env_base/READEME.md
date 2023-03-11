@@ -6,7 +6,7 @@
 # 更新权限，sudo不用输入密码
 sudo echo "liujun ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 ```
-  
+
 ##  更新为国内源
 
 ```bash

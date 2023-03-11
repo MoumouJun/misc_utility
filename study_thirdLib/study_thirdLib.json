@@ -1,0 +1,60 @@
+{
+    //开源仓库 学习
+    "repo": {
+        "设计": [
+            {
+                "name": "system-design-primer",
+                "ssh": "git@github.com:donnemartin/system-design-primer.git",
+                "desc": "系统设计入门",
+                "local_path": "./tmp/" // 路径为空时表示不需要下载学习
+            }
+        ],
+        "操作系统": [
+            {
+                "name": "linux-insides-zh",
+                "ssh": "git@github.com:MintCN/linux-insides-zh.git",
+                "desc": "Linux内核揭秘",
+                "local_path": "./tmp/"
+            }
+        ],
+        "数据结构与算法": [
+            {
+                "name": "MyTinySTL",
+                "ssh": "git@github.com:Alinshans/MyTinySTL.git",
+                "desc": "基于 C++11 的 tinySTL",
+                "local_path": "./tmp/"
+            }
+        ],
+        "网络/通信": [
+            {
+                "name": "lwip",
+                "ssh": "git://git.savannah.gnu.org/lwip.git",
+                "desc": "tcp/ip协议栈的轻量级实现，用于嵌入式系统",
+                "local_path": "./tmp/"
+            },
+            {
+                "name": "muodu",
+                "ssh": "git@github.com:chenshuo/muduo.git",
+                "desc": "通信框架库，reactor模式",
+                "local_path": "./tmp/"
+            },
+            {
+                "name": "Aeron",
+                "ssh": "git@github.com:real-logic/aeron.git",
+                "desc": "一个开源高性能消息传输机制(单向)，支持高效可靠的 UDP 单播、UDP 多播和 IPC 消息传输",
+                "local_path": ""
+            }
+        ]
+    },
+    // 个人注释
+    "own_comment": {
+        "LJ_1": "总体性注释/辅助理解",
+        "LJ_2": "设计疑问点/解惑点",
+        "LJ_3": "语法疑问点/解惑点",
+        "LJ_4": "基本编码不合理/可优化",
+        "LJ_5": "",
+        "LJ_6": "",
+        "LJ_7": "",
+        "LJ_8": ""
+    }
+}
