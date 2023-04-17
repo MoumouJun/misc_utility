@@ -49,6 +49,10 @@
     "editor.formatOnSave": false,
     "editor.multiCursorModifier": "alt",
     "files.associations": {
-        "*.json": "jsonc"
+        "*.json": "jsonc",
+        "cstdlib": "cpp",
+        "*.tcc": "cpp",
+        "fstream": "cpp",
+        "cstring": "cpp"
     },
 }

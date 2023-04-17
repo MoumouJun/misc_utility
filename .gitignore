@@ -5,4 +5,5 @@ build/
 .vscode/
 src/third_tools
 *.test
+test.*
 **/tmp/

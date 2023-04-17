@@ -6,7 +6,7 @@ EDITOR=vim
 # export CLICOLOR=1
 # export LSCOLORS=ExFxBxDxCxegedabagacad
 
-export PATH=$PATH:$HOME/bin/
+export PATH=$PATH:$HOME/bin/:$HOME/.local/bin
 
 
 # Set color variables

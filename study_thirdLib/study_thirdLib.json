@@ -25,6 +25,26 @@
                 "local_path": "./tmp/"
             }
         ],
+        "C/C++": [
+            {
+                "name": "modern-cpp-tutorial",
+                "ssh": "git@github.com:changkun/modern-cpp-tutorial.git",
+                "desc": "现代c++:C++11/14/17/20",
+                "local_path": "./tmp/"
+            },
+            {
+                "name": "CPlusPlusThings",
+                "ssh": "git@github.com:Light-City/CPlusPlusThings.git",
+                "desc": "C++ 那些事",
+                "local_path": "./tmp/"
+            },
+            {
+                "name": "C-Plus-Plus",
+                "ssh": "git@github.com:TheAlgorithms/C-Plus-Plus.git",
+                "desc": "a collection of open-source implementation of a variety of algorithms implemented in C++",
+                "local_path": "./tmp/"
+            }
+        ],
         "网络/通信": [
             {
                 "name": "lwip",
@@ -33,7 +53,7 @@
                 "local_path": "./tmp/"
             },
             {
-                "name": "muodu",
+                "name": "muduo",
                 "ssh": "git@github.com:chenshuo/muduo.git",
                 "desc": "通信框架库，reactor模式",
                 "local_path": "./tmp/"
