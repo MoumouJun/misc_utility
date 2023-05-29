@@ -1,0 +1,31 @@
+{
+  //日志示例
+  //20230525 14:00:00 tradetest2 tkernel_1.sub [12345]: OrderInsert[123456], QrderInsertTotal[7654321]
+  syslog: {
+    base: {
+      date: '',
+      time: '',
+      host: '',
+      module: '',
+      id: '',
+      thread: '',
+      thread_num: '',
+      log_level: '',
+      log_info: ''
+    },
+    module: {
+      tkernel: {
+        file: './test.log',
+        index: {
+          OrderInsert: '',
+          QrderInsertTotal: ''
+        }
+      },
+      mdfront: {}
+    }
+  }
+  // 主机日志
+  //错单csv
+  // dbmt
+  // 告警
+}

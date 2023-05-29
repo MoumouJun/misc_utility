@@ -25,7 +25,7 @@
                 "local_path": "./tmp/"
             }
         ],
-        "C/C++": [
+        "C/C++/python/shell": [
             {
                 "name": "modern-cpp-tutorial",
                 "ssh": "git@github.com:changkun/modern-cpp-tutorial.git",
@@ -41,6 +41,13 @@
             {
                 "name": "C-Plus-Plus",
                 "ssh": "git@github.com:TheAlgorithms/C-Plus-Plus.git",
+                "desc": "a collection of open-source implementation of a variety of algorithms implemented in C++",
+                "local_path": "./tmp/"
+            },
+            {
+                "name": "C-Plus-Plus",
+                "ssh": "git@github.com:python/cpython.git",
+                "branch":"3.7",
                 "desc": "a collection of open-source implementation of a variety of algorithms implemented in C++",
                 "local_path": "./tmp/"
             }

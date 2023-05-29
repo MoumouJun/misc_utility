@@ -31,3 +31,4 @@ WHITE="\[\e[1;37m\]"
 # Change command prompt display
 # NAME="liujun"
 # export PS1="${YELLOW}\W:${PURPLE}${RED} ${NAME}\$ "
+export PYTHONPATH=/home/liujun/misc_utility/pytools/

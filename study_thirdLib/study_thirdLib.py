@@ -26,7 +26,7 @@ class Study3Lib():
             repo_ori = json5.load(f)
             for k, v in repo_ori['repo'].items():
                 for i in v:
-                    repo[i['name']] = [i['ssh'], i['local_path']]
+                    repo[i['name']] = [i['ssh'], i['local_path'], i['branch']]
         print(repo)
         return repo
 
